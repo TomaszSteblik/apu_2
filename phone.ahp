@@ -1,0 +1,317 @@
+Version: 2.0
+
+#########################
+# Alternatives Section
+#
+
+Alternatives: &alternatives
+  Samsung Galaxy S6:
+    Performance: 8
+    Quality: 9
+    Style: 8
+    Price: 699
+    Display: 5.1
+    RAM: 3
+    Memory: 32
+    Camera: 16
+  Samsung Galaxy S6 Edge:
+    Performance: 8
+    Quality: 9
+    Style: 9
+    Price: 799
+    Display: 5.1
+    RAM: 3
+    Memory: 32
+    Camera: 16MP
+  Samsung Galaxy S6 Edge+:
+    Performance: 8
+    Quality: 9
+    Style: 9
+    Price: 849
+    Display: 5.7
+    RAM: 4
+    Memory: 32
+    Camera: 16M
+  Samsung Galaxy Note 5:
+    Performance: 9
+    Quality: 9
+    Style: 8
+    Price: 799
+    Display: 5.7
+    RAM: 4
+    Memory: 32
+    Camera: 16
+  Samsung Galaxy A9 (2016):
+    Performance: 7
+    Quality: 7
+    Style: 7
+    Price: 499
+    Display: 6.0
+    RAM: 3
+    Memory: 32
+  Samsung Galaxy A7 (2016):
+    Performance: 7
+    Quality: 7
+    Style: 7
+    Price: 399
+    Display: 5.5
+    RAM: 3
+    Memory: 16
+  Samsung Galaxy A5 (2016):
+    Performance: 7
+    Quality: 7
+    Style: 7
+    Price: 349
+    Display: 5.2
+    RAM: 2
+    Memory: 16
+  Samsung Galaxy J7 (2016):
+    Performance: 6
+    Quality: 6
+    Style: 6
+    Price: 249
+    Display: 5.5
+    RAM: 2
+    Memory: 16
+  Samsung Galaxy J5 (2016):
+    Performance: 6
+    Quality: 6
+    Style: 6
+    Price: 199
+    Display: 5.2
+    RAM: 2
+    Memory: 16
+  Samsung Galaxy Tab S2:
+    Performance: 7
+    Quality: 8
+    Style: 7
+    Price: 499
+    Display: 8.0
+    RAM: 3
+    Memory: 32
+
+#
+# End of Alternatives Section
+#####################################
+
+#####################################
+# Goal Section
+#
+
+
+Goal:
+  name: Buy android 6 samsung phone
+  description: >
+    This is a classic single decision maker problem. It models
+    the situation facing by a person wanting to buy a smartphone.
+  author: Tomasz Steblik
+  preferences:
+    pairwise:
+      - [Performance, Price, 3]
+      - [Performance, Style, 5]
+      - [Performance, Quality, 7]
+      - [Price, Style, 3]
+      - [Price, Quality, 5]
+      - [Style, Quality, 3]
+  children: 
+    Performance:
+      preferences:
+        pairwise:
+          - [Samsung Galaxy S6, Samsung Galaxy S6 Edge, 0.8]
+          - [Samsung Galaxy S6, Samsung Galaxy S6 Edge+, 0.8]
+          - [Samsung Galaxy S6, Samsung Galaxy Note 5, 0.7]
+          - [Samsung Galaxy S6, Samsung Galaxy A9 (2016), 0.9]
+          - [Samsung Galaxy S6, Samsung Galaxy A7 (2016), 0.7]
+          - [Samsung Galaxy S6, Samsung Galaxy A5 (2016), 0.6]
+          - [Samsung Galaxy S6, Samsung Galaxy J7 (2016), 0.6]
+          - [Samsung Galaxy S6, Samsung Galaxy J5 (2016), 0.7]
+          - [Samsung Galaxy S6, Samsung Galaxy Tab S2, 0.7]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy S6 Edge+, 0.9]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy Note 5, 0.8]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy A9 (2016), 0.8]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy A7 (2016), 0.8]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy A5 (2016), 0.7]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy J7 (2016), 0.6]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy J5 (2016), 0.7]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy Tab S2, 0.8]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy Note 5, 0.8]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy A9 (2016), 0.8]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy A7 (2016), 0.8]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy A5 (2016), 0.7]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy J7 (2016), 0.7]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy J5 (2016), 0.8]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy Tab S2, 0.8]
+          - [Samsung Galaxy Note 5, Samsung Galaxy A9 (2016), 0.8]
+          - [Samsung Galaxy Note 5, Samsung Galaxy A7 (2016), 0.9]
+          - [Samsung Galaxy Note 5, Samsung Galaxy A5 (2016), 0.7]
+          - [Samsung Galaxy Note 5, Samsung Galaxy J7 (2016), 0.8]
+          - [Samsung Galaxy Note 5, Samsung Galaxy J5 (2016), 0.9]
+          - [Samsung Galaxy Note 5, Samsung Galaxy Tab S2, 0.8]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy A7 (2016), 0.7]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy A5 (2016), 0.8]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy J7 (2016), 0.7]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy J5 (2016), 0.6]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy Tab S2, 0.8]
+          - [Samsung Galaxy A7 (2016), Samsung Galaxy A5 (2016), 0.9]
+          - [Samsung Galaxy A7 (2016), Samsung Galaxy J7 (2016), 0.8]
+          - [Samsung Galaxy A7 (2016), Samsung Galaxy J5 (2016), 0.7]
+          - [Samsung Galaxy A7 (2016), Samsung Galaxy Tab S2, 0.9]
+          - [Samsung Galaxy A5 (2016), Samsung Galaxy J7 (2016), 0.8]
+          - [Samsung Galaxy A5 (2016), Samsung Galaxy J5 (2016), 0.7]
+          - [Samsung Galaxy A5 (2016), Samsung Galaxy Tab S2, 0.8]
+          - [Samsung Galaxy J7 (2016), Samsung Galaxy J5 (2016), 0.8]
+          - [Samsung Galaxy J7 (2016), Samsung Galaxy Tab S2, 0.8]
+          - [Samsung Galaxy J5 (2016), Samsung Galaxy Tab S2, 0.9]
+      children: *alternatives
+    Quality:
+      preferences:
+        pairwise:
+          - [Samsung Galaxy S6, Samsung Galaxy S6 Edge, 0.9]
+          - [Samsung Galaxy S6, Samsung Galaxy S6 Edge+, 0.9]
+          - [Samsung Galaxy S6, Samsung Galaxy Note 5, 0.8]
+          - [Samsung Galaxy S6, Samsung Galaxy A9 (2016), 0.8]
+          - [Samsung Galaxy S6, Samsung Galaxy A7 (2016), 0.7]
+          - [Samsung Galaxy S6, Samsung Galaxy A5 (2016), 0.6]
+          - [Samsung Galaxy S6, Samsung Galaxy J7 (2016), 0.7]
+          - [Samsung Galaxy S6, Samsung Galaxy J5 (2016), 0.7]
+          - [Samsung Galaxy S6, Samsung Galaxy Tab S2, 0.8]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy S6 Edge+, 0.9]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy Note 5, 0.8]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy A9 (2016), 0.8]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy A7 (2016), 0.7]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy A5 (2016), 0.6]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy J7 (2016), 0.7]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy J5 (2016), 0.7]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy Tab S2, 0.8]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy Note 5, 0.8]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy A9 (2016), 0.8]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy A7 (2016), 0.7]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy A5 (2016), 0.6]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy J7 (2016), 0.7]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy J5 (2016), 0.7]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy Tab S2, 0.8]
+          - [Samsung Galaxy Note 5, Samsung Galaxy A9 (2016), 0.8]
+          - [Samsung Galaxy Note 5, Samsung Galaxy A7 (2016), 0.7]
+          - [Samsung Galaxy Note 5, Samsung Galaxy A5 (2016), 0.6]
+          - [Samsung Galaxy Note 5, Samsung Galaxy J7 (2016), 0.7]
+          - [Samsung Galaxy Note 5, Samsung Galaxy J5 (2016), 0.7]
+          - [Samsung Galaxy Note 5, Samsung Galaxy Tab S2, 0.8]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy A7 (2016), 0.7]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy A5 (2016), 0.6]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy J7 (2016), 0.7]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy J5 (2016), 0.6]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy Tab S2, 0.8]
+          - [Samsung Galaxy A7 (2016), Samsung Galaxy A5 (2016), 0.7]
+          - [Samsung Galaxy A7 (2016), Samsung Galaxy J7 (2016), 0.6]
+          - [Samsung Galaxy A7 (2016), Samsung Galaxy J5 (2016), 0.5]
+          - [Samsung Galaxy A7 (2016), Samsung Galaxy Tab S2, 0.8]
+          - [Samsung Galaxy A5 (2016), Samsung Galaxy J7 (2016), 0.6]
+          - [Samsung Galaxy A5 (2016), Samsung Galaxy J5 (2016), 0.5]
+          - [Samsung Galaxy A5 (2016), Samsung Galaxy Tab S2, 0.7]
+          - [Samsung Galaxy J7 (2016), Samsung Galaxy J5 (2016), 0.6]
+          - [Samsung Galaxy J7 (2016), Samsung Galaxy Tab S2, 0.7]
+          - [Samsung Galaxy J5 (2016), Samsung Galaxy Tab S2, 0.8]
+      children: *alternatives
+    Style:
+      preferences:
+        pairwise:
+          - [Samsung Galaxy S6, Samsung Galaxy S6 Edge, 0.8]
+          - [Samsung Galaxy S6, Samsung Galaxy S6 Edge+, 0.9]
+          - [Samsung Galaxy S6, Samsung Galaxy Note 5, 0.7]
+          - [Samsung Galaxy S6, Samsung Galaxy A9 (2016), 0.8]
+          - [Samsung Galaxy S6, Samsung Galaxy A7 (2016), 0.7]
+          - [Samsung Galaxy S6, Samsung Galaxy A5 (2016), 0.6]
+          - [Samsung Galaxy S6, Samsung Galaxy J7 (2016), 0.6]
+          - [Samsung Galaxy S6, Samsung Galaxy J5 (2016), 0.7]
+          - [Samsung Galaxy S6, Samsung Galaxy Tab S2, 0.8]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy S6 Edge+, 0.9]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy Note 5, 0.8]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy A9 (2016), 0.8]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy A7 (2016), 0.7]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy A5 (2016), 0.6]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy J7 (2016), 0.6]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy J5 (2016), 0.7]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy Tab S2, 0.8]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy Note 5, 0.8]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy A9 (2016), 0.8]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy A7 (2016), 0.7]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy A5 (2016), 0.6]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy J7 (2016), 0.7]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy J5 (2016), 0.7]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy Tab S2, 0.8]
+          - [Samsung Galaxy Note 5, Samsung Galaxy A9 (2016), 0.8]
+          - [Samsung Galaxy Note 5, Samsung Galaxy A7 (2016), 0.7]
+          - [Samsung Galaxy Note 5, Samsung Galaxy A5 (2016), 0.6]
+          - [Samsung Galaxy Note 5, Samsung Galaxy J7 (2016), 0.7]
+          - [Samsung Galaxy Note 5, Samsung Galaxy J5 (2016), 0.7]
+          - [Samsung Galaxy Note 5, Samsung Galaxy Tab S2, 0.8]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy A7 (2016), 0.7]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy A5 (2016), 0.6]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy J7 (2016), 0.6]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy J5 (2016), 0.5]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy Tab S2, 0.7]
+          - [Samsung Galaxy A7 (2016), Samsung Galaxy A5 (2016), 0.7]
+          - [Samsung Galaxy A7 (2016), Samsung Galaxy J7 (2016), 0.6]
+          - [Samsung Galaxy A7 (2016), Samsung Galaxy J5 (2016), 0.5]
+          - [Samsung Galaxy A7 (2016), Samsung Galaxy Tab S2, 0.7]
+          - [Samsung Galaxy A5 (2016), Samsung Galaxy J7 (2016), 0.6]
+          - [Samsung Galaxy A5 (2016), Samsung Galaxy J5 (2016), 0.5]
+          - [Samsung Galaxy A5 (2016), Samsung Galaxy Tab S2, 0.6]
+          - [Samsung Galaxy J7 (2016), Samsung Galaxy J5 (2016), 0.6]
+          - [Samsung Galaxy J7 (2016), Samsung Galaxy Tab S2, 0.7]
+          - [Samsung Galaxy J5 (2016), Samsung Galaxy Tab S2, 0.8]
+      children: *alternatives
+    Price:
+      preferences:
+        pairwise:
+          - [Samsung Galaxy S6, Samsung Galaxy S6 Edge, 0.9]
+          - [Samsung Galaxy S6, Samsung Galaxy S6 Edge+, 0.8]
+          - [Samsung Galaxy S6, Samsung Galaxy Note 5, 1]
+          - [Samsung Galaxy S6, Samsung Galaxy A9 (2016), 0.7]
+          - [Samsung Galaxy S6, Samsung Galaxy A7 (2016), 0.6]
+          - [Samsung Galaxy S6, Samsung Galaxy A5 (2016), 0.5]
+          - [Samsung Galaxy S6, Samsung Galaxy J7 (2016), 0.3]
+          - [Samsung Galaxy S6, Samsung Galaxy J5 (2016), 0.2]
+          - [Samsung Galaxy S6, Samsung Galaxy Tab S2, 0.7]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy S6 Edge+, 0.8]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy Note 5, 0.9]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy A9 (2016), 0.6]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy A7 (2016), 0.5]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy A5 (2016), 0.4]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy J7 (2016), 0.2]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy J5 (2016), 0.1]
+          - [Samsung Galaxy S6 Edge, Samsung Galaxy Tab S2, 0.6]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy Note 5, 1.0]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy A9 (2016), 0.7]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy A7 (2016), 0.6]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy A5 (2016), 0.5]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy J7 (2016), 0.3]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy J5 (2016), 0.2]
+          - [Samsung Galaxy S6 Edge+, Samsung Galaxy Tab S2, 0.7]
+          - [Samsung Galaxy Note 5, Samsung Galaxy A9 (2016), 0.8]
+          - [Samsung Galaxy Note 5, Samsung Galaxy A7 (2016), 0.7]
+          - [Samsung Galaxy Note 5, Samsung Galaxy A5 (2016), 0.6]
+          - [Samsung Galaxy Note 5, Samsung Galaxy J7 (2016), 0.4]
+          - [Samsung Galaxy Note 5, Samsung Galaxy J5 (2016), 0.3]
+          - [Samsung Galaxy Note 5, Samsung Galaxy Tab S2, 0.8]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy A7 (2016), 0.5]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy A5 (2016), 0.4]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy J7 (2016), 0.2]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy J5 (2016), 0.1]
+          - [Samsung Galaxy A9 (2016), Samsung Galaxy Tab S2, 0.6]
+          - [Samsung Galaxy A7 (2016), Samsung Galaxy A5 (2016), 0.3]
+          - [Samsung Galaxy A7 (2016), Samsung Galaxy J7 (2016), 0.2]
+          - [Samsung Galaxy A7 (2016), Samsung Galaxy J5 (2016), 0.1]
+          - [Samsung Galaxy A7 (2016), Samsung Galaxy Tab S2, 0.5]
+          - [Samsung Galaxy A5 (2016), Samsung Galaxy J7 (2016), 0.1]
+          - [Samsung Galaxy A5 (2016), Samsung Galaxy J5 (2016), 0.1]
+          - [Samsung Galaxy A5 (2016), Samsung Galaxy Tab S2, 0.4]
+          - [Samsung Galaxy J7 (2016), Samsung Galaxy J5 (2016), 0.1]
+          - [Samsung Galaxy J7 (2016), Samsung Galaxy Tab S2, 0.3]
+          - [Samsung Galaxy J5 (2016), Samsung Galaxy Tab S2, 0.2]
+      children: *alternatives
+
+
+#
+# End of Goal Section
+#####################################
